@@ -1,0 +1,56 @@
+.stroeer-videoplayer .stroeer-videoplayer-ui .livestream .livestream-container {
+	cursor: pointer;
+	.livestream-bubble {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		margin-right: 5px;
+		background-color: $livestreamBubbleColor;
+		transform: scale(1);
+		animation: livestream-pulse 2s infinite;
+		&.delayed {
+			background-color: $livestreamBubbleColorDelayed;
+			animation: livestream-pulse-delayed 2s infinite;
+		}
+	}
+	.livestream-text {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $livestreamTextColor;
+	}
+}
+
+@keyframes livestream-pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 getRGBAFromHexValue($livestreamBubbleColor, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 5px getRGBAFromHexValue($livestreamBubbleColor, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 getRGBAFromHexValue($livestreamBubbleColor, 0);
+	}
+}
+
+@keyframes livestream-pulse-delayed {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 getRGBAFromHexValue($livestreamBubbleColorDelayed, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 5px getRGBAFromHexValue($livestreamBubbleColorDelayed, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 getRGBAFromHexValue($livestreamBubbleColorDelayed, 0);
+	}
+}

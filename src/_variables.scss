@@ -1,0 +1,16 @@
+$primaryColor1: #e20074 !default;
+$primaryColor2: #000 !default;
+$primaryColor3: #fff !default;
+
+$controlsHeight: 37px !default;
+$progressHeight: 5px !default;
+
+$livestreamTextColor: #e20074 !default;
+$livestreamBubbleColor: #e20074 !default;
+$livestreamTextColorDelayed: #e20074 !default;
+$livestreamBubbleColorDelayed: #e20074 !default;
+
+@function getRGBAFromHexValue($hex, $alphaValue) {
+	@return rgba($hex, $alphaValue);
+}
+
