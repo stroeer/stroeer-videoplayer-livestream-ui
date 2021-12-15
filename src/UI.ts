@@ -337,8 +337,8 @@ class UI {
       [{
         name: 'click',
         callb: () => {
-          dispatchEvent('UIFullscreen', videoEl.currentTime)
-          dispatchEvent('UILivestreamFullscreen', videoEl.currentTime)
+          dispatchEvent('UIEnterFullscreen', videoEl.currentTime)
+          dispatchEvent('UILivestreamEnterFullscreen', videoEl.currentTime)
           StroeerVideoplayer.enterFullscreen()
         }
       }])
