@@ -123,16 +123,13 @@
                         }
 		}
 	}
-	@media screen and (max-width: 360px) {
-	    .volSliderBox {
-		width: 80px;
-		left: 110px;
-	    }
-	}
-	@media screen and (max-width: 340px) {
-	    .volSliderBox {
-		width: 60px;
-		left: 100px;
-	    }
-	}
+}
+
+@media screen and (max-width: 375px) {
+  .stroeer-videoplayer .stroeer-videoplayer-ui .error {
+    font-size: 13px;
+    svg {
+      height: 121px;
+    }
+  }
 }
