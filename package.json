@@ -1,5 +1,5 @@
 {
- "version": "0.0.1",
+ "version": "0.0.2",
  "name": "@stroeer/stroeer-videoplayer-livestream-ui",
  "description": "Ströer Videoplayer Livestream UI",
  "main": "dist/StroeerVideoplayer-livestream-ui.cjs.js",
@@ -36,7 +36,7 @@
   "@rollup/plugin-json": "^4.1.0",
   "@rollup/plugin-node-resolve": "^11.2.0",
   "@rollup/plugin-typescript": "^8.1.0",
-  "@stroeer/stroeer-videoplayer": "^0.0.14",
+  "@stroeer/stroeer-videoplayer": "^0.0.15",
   "@stroeer/stroeer-videoplayer-ivad-plugin": "^0.0.17",
   "@stroeer/stroeer-videoplayer-ivad-ui": "^0.0.14",
   "@superevilmegaco/jest-evil-svg-transformer": "^0.0.4",

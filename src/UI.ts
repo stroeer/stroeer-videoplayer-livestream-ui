@@ -133,6 +133,23 @@ class UI {
     }
   }
 
+  showErrorScreen = (StroeerVideoplayer: IStroeerVideoplayer, error: string): void => {
+    const videoEl = StroeerVideoplayer.getVideoEl()
+    videoEl.removeAttribute('controls')
+    const uiEl = StroeerVideoplayer.getUIEl()
+    const height = videoEl.clientHeight
+    const width = videoEl.clientWidth
+    this.deinit(StroeerVideoplayer)
+    videoEl.parentNode.removeChild(videoEl)
+    const text = document.createElement('div')
+    text.innerHTML = error
+    uiEl.innerHTML = '<div class="error"></div>'
+    uiEl.firstChild.style.height = String(height) + 'px'
+    uiEl.firstChild.style.width = String(width) + 'px'
+    uiEl.firstChild.appendChild(SVGHelper('Icon-Error'))
+    uiEl.firstChild.appendChild(text)
+  }
+
   init = (StroeerVideoplayer: IStroeerVideoplayer): void => {
     const rootEl = StroeerVideoplayer.getRootEl()
     const videoEl = StroeerVideoplayer.getVideoEl()
@@ -148,6 +165,12 @@ class UI {
       uiIconsContainer.innerHTML = UIIcons
       document.body.appendChild(uiIconsContainer)
     }
+
+    videoEl.addEventListener('hlsNetworkError', (evt: any) => {
+      if (evt.detail.response.code === 404) {
+        this.showErrorScreen(StroeerVideoplayer, 'Dieser Livestream ist <strong>beendet</strong> oder steht aktuell <strong>nicht zur Verfügung.</strong>')
+      }
+    })
 
     const uiContainer = document.createElement('div')
     const loadingSpinnerContainer = document.createElement('div')

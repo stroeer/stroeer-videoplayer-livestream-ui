@@ -13,6 +13,21 @@
 .stroeer-videoplayer .stroeer-videoplayer-ui {
     top: 0;
 }
+
+.stroeer-videoplayer .stroeer-videoplayer-ui .error {
+	text-align: center;
+	background-color: #171B26;
+	color: #fff;
+	border-radius: 8px;
+	padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+	svg {
+		height: 146px;
+		fill: $primaryColor1;
+	}
+}
+
 .stroeer-videoplayer .stroeer-videoplayer-ui .livestream {
 	position: relative;
 	z-index: 200;

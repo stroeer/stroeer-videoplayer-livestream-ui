@@ -757,10 +757,10 @@
   resolved "https://registry.yarnpkg.com/@stroeer/stroeer-videoplayer-ivad-ui/-/stroeer-videoplayer-ivad-ui-0.0.14.tgz#b47dcf70f23a7f94327bf606cf1a75d6d4bfa979"
   integrity sha512-hWPmFpGmYB2nb7veNA+E6/lEgHWTUwdryTpn5BCM2quBWWWxZsNLJq++fRiO6k+DyT4i6FD2hBDc5L43F6o8DA==
 
-"@stroeer/stroeer-videoplayer@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@stroeer/stroeer-videoplayer/-/stroeer-videoplayer-0.0.14.tgz#d6b0657d69b194ff233cf56be305daba231fa182"
-  integrity sha512-gViImw2o+58SAoMPPQAqAUsQJgjYGz+V8khs/Rdowt2OliBoMQn7upoPbN9jvjXmOtZVSuo07EL2nKfhoeCVSA==
+"@stroeer/stroeer-videoplayer@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@stroeer/stroeer-videoplayer/-/stroeer-videoplayer-0.0.15.tgz#8d5935fc1573e5fce60660d4c37cc6770aee7ae1"
+  integrity sha512-rmpnRaEPf56eql5RBptX2VqvBnUWpafaLB/841k6WL1L4ZT7b/Irt0tXLcx/eLvDbEHM7YVgDbHukey21BlD1w==
   dependencies:
     hls.js "^1.0.8"
 
