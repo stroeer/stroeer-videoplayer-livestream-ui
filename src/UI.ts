@@ -137,6 +137,9 @@ class UI {
     const videoEl = StroeerVideoplayer.getVideoEl()
     videoEl.removeAttribute('controls')
     const uiEl = StroeerVideoplayer.getUIEl()
+    if (uiEl.querySelector('.error') !== null) {
+      return
+    }
     const height = videoEl.clientHeight
     const width = videoEl.clientWidth
     this.deinit(StroeerVideoplayer)
@@ -167,8 +170,11 @@ class UI {
     }
 
     videoEl.addEventListener('hlsNetworkError', (evt: any) => {
-      if (evt.detail.response.code === 404) {
-        this.showErrorScreen(StroeerVideoplayer, 'Dieser Livestream ist <strong>beendet</strong> oder steht aktuell <strong>nicht zur Verfügung.</strong>')
+      switch (evt.detail.response.code) {
+        case 0:
+        case 404:
+          this.showErrorScreen(StroeerVideoplayer, 'Dieser Livestream ist <strong>beendet</strong> oder steht aktuell <strong>nicht zur Verfügung.</strong>')
+          break
       }
     })
 
