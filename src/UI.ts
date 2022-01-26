@@ -171,6 +171,9 @@ class UI {
 
     videoEl.addEventListener('hlsNetworkError', (evt: any) => {
       switch (evt.detail.response.code) {
+        case 403:
+          this.showErrorScreen(StroeerVideoplayer, 'Dieses Video ist in Ihrem Land nicht verfügbar.<br/>This content is not available in your country.')
+          break
         case 0:
         case 404:
           this.showErrorScreen(StroeerVideoplayer, 'Dieser Livestream ist <strong>beendet</strong> oder steht aktuell <strong>nicht zur Verfügung.</strong>')
@@ -265,6 +268,10 @@ class UI {
           callb: () => {
             dispatchEvent('UIPlay', videoEl.currentTime)
             dispatchEvent('UILivestreamPlay', videoEl.currentTime)
+            if (videoEl.currentTime > 0) {
+              dispatchEvent('UIResume', videoEl.currentTime)
+              dispatchEvent('UILivestreamResume', videoEl.currentTime)
+            }
             videoEl.play()
           }
         }
@@ -412,6 +419,10 @@ class UI {
         dispatchEvent('UILivestreamPlay', videoEl.currentTime)
         dispatchEvent('UIUIContainerPlay', videoEl.currentTime)
         dispatchEvent('UILivestreamUIContainerPlay', videoEl.currentTime)
+        if (videoEl.currentTime > 0) {
+          dispatchEvent('UIResume', videoEl.currentTime)
+          dispatchEvent('UILivestreamResume', videoEl.currentTime)
+        }
         videoEl.play()
       } else {
         if (isTouchDevice()) {
@@ -435,6 +446,10 @@ class UI {
         dispatchEvent('UILivestreamPlay', videoEl.currentTime)
         dispatchEvent('UIOverlayContainerPlay', videoEl.currentTime)
         dispatchEvent('UILivestreamOverlayContainerPlay', videoEl.currentTime)
+        if (videoEl.currentTime > 0) {
+          dispatchEvent('UIResume', videoEl.currentTime)
+          dispatchEvent('UILivestreamResume', videoEl.currentTime)
+        }
         videoEl.play()
       } else {
         dispatchEvent('UIPause', videoEl.currentTime)
