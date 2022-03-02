@@ -58,6 +58,15 @@ class StroeerVideoplayer {
     return videoEl
   }
 
+  getHls = (): any => {
+    const mock = (): any => {
+      return {
+        destroy: () => {}
+      }
+    }
+    return mock
+  }
+
   loading = (): void => {
   }
 
