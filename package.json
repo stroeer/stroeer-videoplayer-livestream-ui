@@ -1,5 +1,5 @@
 {
- "version": "0.0.8",
+ "version": "0.0.9",
  "name": "@stroeer/stroeer-videoplayer-livestream-ui",
  "description": "Ströer Videoplayer Livestream UI",
  "main": "dist/StroeerVideoplayer-livestream-ui.cjs.js",

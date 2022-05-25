@@ -232,9 +232,19 @@ class UI {
 
     const showLoading = (modus: boolean): void => {
       if (modus) {
+        hideElement(overlayContainer)
         showElement(loadingSpinnerContainer)
       } else {
         hideElement(loadingSpinnerContainer)
+      }
+    }
+
+    const showBigPlayButton = (modus: boolean): void => {
+      if (modus) {
+        hideElement(loadingSpinnerContainer)
+        showElement(overlayContainer)
+      } else {
+        hideElement(overlayContainer)
       }
     }
 
@@ -243,11 +253,7 @@ class UI {
     }
 
     StroeerVideoplayer.showBigPlayButton = (modus: boolean): void => {
-      if (modus) {
-        showElement(overlayContainer)
-      } else {
-        hideElement(overlayContainer)
-      }
+      showBigPlayButton(modus)
     }
 
     videoEl.addEventListener('waiting', () => {
