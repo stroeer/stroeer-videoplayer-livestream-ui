@@ -46,8 +46,8 @@ const showElement = (element: HTMLElement): void => {
 }
 
 class UI {
-  version: string
-  uiName: string
+  public static version: string = version
+  public static uiName: string = 'livestream'
   uiContainerClassName: string
   onDocumentFullscreenChange: Function
   onVideoElPlay: Function
@@ -63,8 +63,6 @@ class UI {
   isMouseDown: Boolean
 
   constructor () {
-    this.version = version
-    this.uiName = 'livestream'
     this.uiContainerClassName = 'livestream'
     this.onDocumentFullscreenChange = noop
     this.onVideoElPlay = noop
@@ -738,6 +736,4 @@ class UI {
   }
 }
 
-const StroeerVideoplayerLivestreamUI = new UI()
-
-export default StroeerVideoplayerLivestreamUI
+export default UI

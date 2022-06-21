@@ -759,20 +759,20 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@stroeer/stroeer-videoplayer-ivad-plugin@0.0.21":
-  version "0.0.21"
-  resolved "https://registry.npmjs.org/@stroeer/stroeer-videoplayer-ivad-plugin/-/stroeer-videoplayer-ivad-plugin-0.0.21.tgz"
-  integrity sha512-BOm6Gxgw0HpdvzuSXLB8UGjudFylMKgtkgfEYNcn5Yx+qSS60RrEaCfyK0vph0ocBBmo9qX4MqAkrWMJ065Ubg==
+"@stroeer/stroeer-videoplayer-ivad-plugin@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stroeer/stroeer-videoplayer-ivad-plugin/-/stroeer-videoplayer-ivad-plugin-1.0.0.tgz#c5f6d62155a12c02db754948412353f1b1b85b21"
+  integrity sha512-XHvHhDLOhun9QaxU8vz9QdTM7yCei7mRUPKkheyjjMN6YsZpxugvY9xLMMoq7PKnsJkBUY273oQTV82o8c61Rw==
 
-"@stroeer/stroeer-videoplayer-ivad-ui@0.0.16":
-  version "0.0.16"
-  resolved "https://registry.npmjs.org/@stroeer/stroeer-videoplayer-ivad-ui/-/stroeer-videoplayer-ivad-ui-0.0.16.tgz"
-  integrity sha512-4qKihyry8qr6dnD/7c9FBO9tP6z3ltpvsOzsu7vx1wSC+q+hgBTqXPzGqwXU1zWYNEY5p2rtRi8RtqDEXoMZeQ==
+"@stroeer/stroeer-videoplayer-ivad-ui@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stroeer/stroeer-videoplayer-ivad-ui/-/stroeer-videoplayer-ivad-ui-1.0.0.tgz#b2ae81897f4f8fe0109929a6cd75b2d46a753b39"
+  integrity sha512-kRmtJ9ZJ8w2pa2NdICTQgbNE/7vS/hwhMZqRmTPvBVoivODw7GieBSIsNj9q1mNOB3D5x9O/Wg6IggbRfWbQyg==
 
-"@stroeer/stroeer-videoplayer@0.0.24":
-  version "0.0.24"
-  resolved "https://registry.npmjs.org/@stroeer/stroeer-videoplayer/-/stroeer-videoplayer-0.0.24.tgz"
-  integrity sha512-zwpVeJu42Y166xvXqgWdb9NrLaLFJOGEYHBJXt5/K+qOm/tleUEJM1OPyom4zt3CQbjMW8SPuxkY1A8qlTOYmA==
+"@stroeer/stroeer-videoplayer@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@stroeer/stroeer-videoplayer/-/stroeer-videoplayer-1.0.1.tgz#df318af37c85922107eadf6bc5481f33bdf2d262"
+  integrity sha512-IA3D/DNBQELGo7RxBIXrFbOILD7mxNMMGOlXBfOTNxMVd3twCrgHoxAfX/TlGfCRxuBcASejNQYGKpegK43Lig==
   dependencies:
     hls.js "1.1.5"
 
